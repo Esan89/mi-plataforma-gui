@@ -31,7 +31,7 @@ export default defineConfig((/* ctx */) => {
         vueShim: true,
       },
 
-      vueRouterMode: 'hash',
+      vueRouterMode: 'history',
 
       vitePlugins: [
         [
@@ -47,7 +47,7 @@ export default defineConfig((/* ctx */) => {
         ],
       ],
 
-      extendViteConf (viteConf) {
+      extendViteConf(viteConf) {
         viteConf.server = {
           ...viteConf.server,
           // Esto permite que Ngrok entre sin bloqueo de host
